@@ -13,7 +13,7 @@ module.exports = {
     assetsSubDirectory: 'static',
 
     //****修改**** assetsPublicPath: '/' 
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
 
     productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as

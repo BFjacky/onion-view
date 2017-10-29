@@ -15,6 +15,8 @@
 import axios from "axios";
 import parseWeek from "./parseWeek";
 import detailLog from "./detailLog";
+//test主机域名
+const host = "http://www.dyycyf.top";
 const width = 14.28;
 const height = 16.66;
 export default {
@@ -51,7 +53,7 @@ export default {
   created: async function() {
     let coursesData = [];
     let index = 0;
-    let m = await axios.get("/DyySche");
+    let m = await axios.get(host+"/DyySche");
     for (let i = 0; i < m.data.length; i++) {
       for (let j = 0; j < m.data[i].courseUnits.length; j++) {
         coursesData[index] = {

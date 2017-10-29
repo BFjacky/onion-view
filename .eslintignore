@@ -5,3 +5,4 @@ src/router/*.js
 src/components/*.vue
 src/*.js
 src/components/*.js
+src/components/home/*.vue

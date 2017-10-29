@@ -1,7 +1,7 @@
 <template>
   <div class="schePage">
       <div class="header">
-        <sche-header  v-bind:curr-week="currWeek"></sche-header>
+        <sche-header  v-bind:curr-week="currWeek" v-bind:choise1="isChoise1" v-bind:choise2="isChoise2"></sche-header>
       </div>
       <div class="main">
          <course v-bind:curr-week="currWeek"></course>
@@ -15,7 +15,9 @@ export default {
   name: "schedule",
   data:function(){
     return {
-      currWeek:0
+      currWeek:0,
+      isChoise1:false,
+      isChoise2:true,
     }
   },
   created: function() {

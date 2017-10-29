@@ -7,10 +7,12 @@ import schedule from '@/components/schedule'
 import scheHeader from '@/components/scheHeader'
 import course from '@/components/course'
 import detailLog from '@/components/detailLog'
+import homepage from '@/components/home/homepage'
+import slider from '@/components/sliderDemo.vue'
 Vue.use(Router)
 
 export default new Router({
-  //mode: 'history',
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -26,6 +28,16 @@ export default new Router({
       path: '/log',
       name: 'detailLog',
       component: detailLog,
+    },
+    {
+      path: '/home',
+      name:'homepage',
+      component: homepage
+    },
+    {
+      path:'/slider',
+      name:'slider',
+      component: slider
     }
   ]
 })
