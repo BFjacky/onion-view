@@ -22,7 +22,7 @@ const height = 16.66;
 export default {
   name: "course",
   //当前周
-  props: ["currWeek"],
+  props: ["currWeek","url"],
   data: function() {
     return {
       Data: [],
@@ -53,7 +53,7 @@ export default {
   created: async function() {
     let coursesData = [];
     let index = 0;
-    let m = await axios.get(host+"/DyySche");
+    let m = await axios.get(host+this.url);
     for (let i = 0; i < m.data.length; i++) {
       for (let j = 0; j < m.data[i].courseUnits.length; j++) {
         coursesData[index] = {
@@ -205,7 +205,6 @@ export default {
 </script>
 <style scoped>
 .courses {
-  position: relative;
   width: 100%;
   height: 100%;
   flex-wrap: wrap;

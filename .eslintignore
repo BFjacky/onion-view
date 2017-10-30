@@ -6,3 +6,4 @@ src/components/*.vue
 src/*.js
 src/components/*.js
 src/components/home/*.vue
+src/components/slider/*.vue

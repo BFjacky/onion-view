@@ -4,10 +4,6 @@
         <div class="litTitle">
           第{{currWeek}}周
         </div>
-        <div class="header_page">
-            <div class="choise" v-bind:class="{isChoose:choise1}"></div>
-            <div class="choise" v-bind:class="{isChoose:choise2}"></div>
-        </div>
       </div>
       <div class="header_down">
           <div class="header_down_block">周一</div>
@@ -40,26 +36,6 @@ div {
 .header_up {
   height: 65%;
   width: 100%;
-}
-.header_page {
-  background-color: black;
-  position: relative;
-  top: 25%;
-  height: 10%;
-  width: 100%;
-  display:flex;
-  justify-content: center;
-}
-.choise {
-  background-color: #bbbec4;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  margin-right:30px;
-  margin-left:30px;
-}
-.isChoose{
-  background-color: white;
 }
 .litTitle {
   text-align: center;
