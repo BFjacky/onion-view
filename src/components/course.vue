@@ -131,7 +131,7 @@ export default {
           coursesData[i].x = 5 * width + "%";
           coursesData[i].colorNum += 6;
           break;
-        case "周七":
+        case "周日":
           coursesData[i].x = 6 * width + "%";
           coursesData[i].colorNum += 7;
           break;

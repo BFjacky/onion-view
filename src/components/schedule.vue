@@ -96,14 +96,13 @@ export default {
     this.currWeek = parseInt(betweenWeeks);
   },
   components: {
-    course: course,
-    scheHeader: scheHeader
+    course,
+    scheHeader
   }
 };
 </script>
 <style scoped>
 .schePage {
-  background-image: url(../assets/ScheImg.jpg);
   width: 100%;
   height: 100%;
 }
