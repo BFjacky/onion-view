@@ -40,11 +40,11 @@ div {
 .litTitle {
   text-align: center;
   color: white;
-  font-size: 50px;
+  font-size: 17px;
   position: relative;
   top: 50%;
   transform: translate(0, -50%);
-  letter-spacing: 10px;
+  letter-spacing: 3px;
 }
 .header_down {
   width: 100%;
@@ -54,7 +54,7 @@ div {
 .header_down_block {
   text-align: center;
   color: white;
-  font-size: 40px;
+  font-size: 13px;
   width: 14.28%;
 }
 </style>

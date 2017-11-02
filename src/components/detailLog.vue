@@ -74,7 +74,8 @@ body {
 }
 .contentStr {
   width: 100%;
-  font-size: 40px;
+  font-size: 16px;
+  font-weight: 700;
 }
 .all {
   display: flex;
@@ -110,25 +111,25 @@ body {
   top: 50%;
   flex-direction: column;
   opacity: 1;
-  width: 600px;
+  width: 200px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 7px;
   z-index: 10000;
 }
 
 .dialog_content {
-  font-size: 30px;
+  font-size: 10px;
 }
 
 .dialog_confirm_button {
   color: #ffa113;
-  height: 100px;
+  height: 33px;
   border-top: 1px solid #bebcbc;
   text-indent: 10px;
   letter-spacing: 10px;
-  line-height: 100px;
+  line-height: 33px;
   overflow: hidden;
-  font-size: 60px;
+  font-size: 20px;
 }
 @keyframes fadeIn {
   from {

@@ -217,7 +217,7 @@ export default {
   display: inline-block;
   width: 14.28%;
   height: 16.66%;
-  font-size: 30px;
+  font-size: 13px;
   text-align: center;
   color: black;
 }
@@ -252,7 +252,7 @@ div {
 .courseMore:before {
   content: "";
   display: block; /*伪元素默认是行内元素，所以如果要设定宽高，这必须显性设置为block*/
-  border-width: 0 0px 30px 30px; /*设置边框宽度*/
+  border-width: 0 0px 10px 10px; /*设置边框宽度*/
   border-color: #fff transparent #fff transparent;
   background: transparent;
   border-style: solid; /*设置边框为固体的*/
@@ -260,6 +260,6 @@ div {
   position: absolute; /*相对于父容器绝对定位，设置偏移父容器边框距离*/
   bottom: 0;
   right: 0;
-  box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.3);
 }
 </style>

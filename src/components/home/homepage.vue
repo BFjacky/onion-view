@@ -2,10 +2,10 @@
 <div class="all">
   <grid cols='3' class="grid">
     <grid-item  class="gridItem"  :link="{ path: '/schedule'}" >
-      <img class="img" slot="icon" src="../../assets/schedule.png" >
+      <img  class="img"slot="icon" src="../../assets/schedule.png" >
     </grid-item>
-        <grid-item  class="gridItem">
-      <img class="img" slot="icon" src="../../assets/whether.png" >
+        <grid-item  class="gridItem" :link="{ path: '/whether'}" >
+      <img  class="img"slot="icon" src="../../assets/whether.png" >
     </grid-item>
        <grid-item  class="gridItem">
       <img class="img" slot="icon" src="../../assets/album.png" >
@@ -27,7 +27,7 @@ export default {
   },
   components: {
     Grid,
-    GridItem,
+    GridItem
   }
 };
 </script>
@@ -47,15 +47,7 @@ export default {
   margin: 0px;
 }
 .img {
-  position: relative;
-  transform: scale(6, 8) translateY(90%);
-}
-.spanTitle {
-  display: block;
-  text-align: center;
-  color: #666;
-  font-size: 40px;
-  transform: translateY(500%);
+  transform: translateY(250%) scale(2,2.5);
 }
 </style>
 
