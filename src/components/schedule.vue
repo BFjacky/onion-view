@@ -65,12 +65,8 @@ export default {
           flag
         ) {
           if (direct) {
-            //向右
-            console.log("right");
             this.moveRight();
           } else {
-            //向左
-            console.log("left");
             this.moveLeft();
           }
           //直到touchEnd 事件触发都不会再使手势生效

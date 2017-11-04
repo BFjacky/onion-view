@@ -1,16 +1,17 @@
 <template>
-  <div class="all_back"></div>
+    <div class="all">
+    </div>
 </template>
 <script>
-export default {
-  name: 'background',
-  props: []
-}
+export default {};
 </script>
 <style scoped>
-.all_back {
+.all {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: 100%;
   height: 100%;
-  background-color: orange;
+  background-image: url(../assets/backImg.jpg);
 }
 </style>

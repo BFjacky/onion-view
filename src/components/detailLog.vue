@@ -29,7 +29,7 @@ export default {
     };
   },
   created: function() {
-    console.log(this.content, this.display);
+
   },
   watch: {
     display: function() {

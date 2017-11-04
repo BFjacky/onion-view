@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import loginPage from '@/components/loginPage'
 import schedule from '@/components/schedule'
 import homepage from '@/components/home/homepage'
 import whether from '@/components/whether'
+import login from '@/components/login'
 import { ToastPlugin, LoadingPlugin } from 'vux'
 Vue.use(ToastPlugin);
 Vue.use(Router);
@@ -12,14 +12,9 @@ export default new Router({
   //mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'homepage',
       component: homepage,
-    },
-    {
-      path: '/login',
-      name: 'loginPage',
-      component: loginPage,
     },
     {
       path: '/schedule',
@@ -30,6 +25,11 @@ export default new Router({
       path: '/whether',
       name: 'whether',
       component: whether,
+    },
+    {
+      path: '/',
+      name: 'login',
+      component: login,
     }
   ]
 })

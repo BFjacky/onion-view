@@ -16,13 +16,15 @@ import axios from "axios";
 import parseWeek from "./parseWeek";
 import detailLog from "./detailLog";
 //test主机域名
+//测试时为http://www.dyycyf.top
+//运行时为空
 const host = "http://www.dyycyf.top";
 const width = 14.28;
 const height = 16.66;
 export default {
   name: "course",
   //当前周
-  props: ["currWeek","url"],
+  props: ["currWeek", "url"],
   data: function() {
     return {
       Data: [],
@@ -37,7 +39,6 @@ export default {
       this.dialogOut = true;
       let result = [];
       let index = 0;
-      console.log(course.boxNumber);
       for (let i = 0; i < this.Data.length; i++) {
         if (this.Data[i].boxNumber === course.boxNumber) {
           result[index] = this.Data[i];
@@ -53,16 +54,25 @@ export default {
   created: async function() {
     let coursesData = [];
     let index = 0;
-    let m = await axios.get(host+this.url);
-    for (let i = 0; i < m.data.length; i++) {
-      for (let j = 0; j < m.data[i].courseUnits.length; j++) {
+    let m = await axios.get(host + this.url, {
+      withCredentials: true
+    });
+    //不具有登录权限
+    m.data.message = JSON.parse(m.data.message);
+    if (m.data.message.login !== "success") {
+      this.$router.push("/");
+      return;
+    }
+    let resultCourses = m.data.data;
+    for (let i = 0; i < resultCourses.length; i++) {
+      for (let j = 0; j < resultCourses[i].courseUnits.length; j++) {
         coursesData[index] = {
-          name: m.data[i].name,
-          teacher: m.data[i].teacher,
-          count: m.data[i].courseUnits[j].count,
-          dayOfWeek: m.data[i].courseUnits[j].dayOfWeek,
-          room: m.data[i].courseUnits[j].room,
-          weeks: m.data[i].courseUnits[j].weeks
+          name: resultCourses[i].name,
+          teacher: resultCourses[i].teacher,
+          count: resultCourses[i].courseUnits[j].count,
+          dayOfWeek: resultCourses[i].courseUnits[j].dayOfWeek,
+          room: resultCourses[i].courseUnits[j].room,
+          weeks: resultCourses[i].courseUnits[j].weeks
         };
         index++;
       }
@@ -209,8 +219,8 @@ export default {
   height: 100%;
   flex-wrap: wrap;
 }
-.room{
-  font-weight:700;
+.room {
+  font-weight: 700;
 }
 .course {
   overflow: hidden;
